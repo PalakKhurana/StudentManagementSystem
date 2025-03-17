@@ -22,11 +22,11 @@ jobs:
       - name: Build with Maven
         run: mvn -B clean package --no-transfer-progress -X
 
-#      - name: Install Dependencies
-#        run: ./mvnw clean install -DskipTests
+      - name: Install Dependencies
+        run: mvn clean install
 
       - name:  Build The App
-        run: ./mvnw package
+        run: mvn package
 
 
       # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
